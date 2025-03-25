@@ -1,0 +1,59 @@
+body {
+    background-image: url("https://wallpapercave.com/wp/wp3644256.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    color: rgb(220, 3, 3);
+  }
+  .card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+    .card {
+        background-color: rgba(214, 16, 16, 0.907);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(106, 6, 255, 0.055);
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+    }  
+
+
+    select {
+        text-align: center; 
+        text-align-last: center;
+      }
+      
+
+
+      .select-center {
+        text-align: center;      
+        text-align-last: center;  
+        appearance: none;         
+        -webkit-appearance: none; 
+        -moz-appearance: none;    
+        display: block;
+        margin: 0 auto;           
+        width: 50%;               
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #160303;
+      }
+      .cards-container {
+        background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapersden.com%2Fpokemon-pikachu-art-wallpaper%2F&psig=AOvVaw20eIHvRh9Rr2jH2s7Wk2Qc&ust=1742875324798000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJCrptfqoYwDFQAAAAAdAAAAABAJ"); /* Cambia la URL a la que quieras */
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+
+      .cards-container {
+        background: linear-gradient(135deg, #1c6f90, #2a5298);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      
+      
