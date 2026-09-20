@@ -1,82 +1,80 @@
-# 📌 Pokédex Proyecto
+# 📌 Pokédex Project
 
-Este es un proyecto de **Pokédex** desarrollado con **React, TypeScript y GraphQL**, utilizando la **PokéAPI** para obtener información sobre los Pokémon.
+This is a **Pokédex** project built with **React, TypeScript and GraphQL**, using the **PokéAPI** to fetch information about Pokémon.
 
-## Tecnologías Utilizadas
+## Technologies Used
 - **React** (Vite)
 - **TypeScript**
 - **GraphQL** (Apollo Client)
-- **Bootstrap** (para estilos)
-- **React Router** (para navegación)
+- **Bootstrap** (for styling)
+- **React Router** (for navigation)
 
 ---
 
-## Instalación y Ejecución
+## Installation and Setup
 
-Sigue estos pasos para ejecutar el proyecto en tu máquina local:
+Follow these steps to run the project on your local machine:
 
-### 1️⃣ **Clonar el repositorio**
+### 1️⃣ Clone the repository
 ```sh
 git clone https://github.com/tu-usuario/pokedex-proyecto.git
 cd pokedex-proyecto
- Instalar dependencias
-Ejecuta el siguiente comando para instalar las dependencias necesarias:
+```
 
-sh
-Copy
-Edit
-3️⃣ Ejecutar el servidor de desarrollo
-Inicia la aplicación en modo desarrollo con:
+### 2️⃣ Install dependencies
+```sh
+npm install
+```
 
+### 3️⃣ Run the development server
+```sh
 npm run dev
+```
 
-Luego, abre el navegador y accede a:
+Then open your browser and go to:
 
 http://localhost:5173
 
- Uso de la Aplicación
-Página Principal
+## Using the Application
 
-Muestra una bienvenida con un botón para explorar la Pokédex.
+**Home page**
 
-Listado de Pokémon
+Shows a welcome screen with a button to explore the Pokédex.
 
-Permite buscar Pokémon por nombre.
+**Pokémon list**
 
-Filtrar por tipo de Pokémon.
+- Search Pokémon by name.
+- Filter by Pokémon type.
+- View stats such as HP, Attack, Defense, Speed.
 
-Ver estadísticas como HP, Ataque, Defensa, Velocidad.
+**Pokémon details**
 
-Detalles de Pokémon
+Clicking on a Pokémon shows its full information.
 
-Al hacer clic en un Pokémon, se muestra su información completa.
+## Justification for using `any` in TypeScript
 
- Justificación del uso de any en TypeScript
-En algunos casos, se ha utilizado any debido a:
+In some cases, `any` was used because of:
 
-Estructura de datos compleja de la API de GraphQL, donde los tipos pueden variar y no siempre están bien definidos en la documentación.
+- The complex data structure returned by the GraphQL API, where types can vary and aren't always well defined in the documentation.
+- Compatibility with the PokéAPI, since some responses don't have a fixed type.
+- Handling of dynamic data, especially when mapping information such as stats and types.
 
-Compatibilidad con la PokéAPI, ya que algunas respuestas no tienen un tipo fijo.
+Example where `any` was necessary:
 
-Manejo de datos dinámicos, especialmente al mapear información como estadísticas y tipos.
-
- Ejemplo donde any fue necesario:
-
+```ts
 pokemon.pokemon_v2_pokemonstats.find((s: any) => s.pokemon_v2_stat.name === "hp")?.base_stat || "N/A"
-En este caso, any se usa temporalmente porque la API devuelve una estructura anidada que puede cambiar.
+```
 
- Solución futura:
+In this case, `any` is used temporarily because the API returns a nested structure that can change.
 
-Se recomienda definir interfaces TypeScript específicas para los datos de la PokéAPI y eliminar any progresivamente.
+**Future improvement:**
 
-
+It's recommended to define specific TypeScript interfaces for the PokéAPI data and progressively remove `any`.
 
 ---
 
-###  **¿Qué incluye este `README.md`?**
- **Instrucciones de instalación y ejecución**  
- **Explicación de funcionalidades**  
- *Justificación del uso de `any` en TypeScript**  
-**Cómo desplegar en producción**  
- **Información del autor**  
-
+### What does this `README.md` include?
+- ✅ Installation and setup instructions
+- ✅ Explanation of features
+- ✅ Justification for the use of `any` in TypeScript
+- ✅ Author information
